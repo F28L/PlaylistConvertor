@@ -140,7 +140,7 @@ const getPlaylistSpotify = async (playlist_id) => {
 
 // Add songs to playlist
 const addToPlaylist = async (playlistID, songURI) => {
-    fetch(`	https://api.spotify.com/v1/playlists/${playlistID}/tracks?uris=${songURI}`, {
+    fetch(`https://api.spotify.com/v1/playlists/${playlistID}/tracks?uris=${songURI}`, {
         method: 'post',
         headers: {
             'Authorization': `Bearer ${OAUTH_TOKEN}`,
@@ -173,5 +173,3 @@ const searchWithArtistAlbumTitle = async (query) => {
             })
     });
 }
-
-// TESTING
